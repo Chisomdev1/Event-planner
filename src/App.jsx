@@ -1,11 +1,15 @@
 import React from "react";
 import { Button } from "./components/Button";
 import { CalendarDays, MapPin, Users, ClipboardList } from "lucide-react";
+import Navbar from "./components/Navbar";
 
 function App() {
 
   return (
     <main className="bg-white poppins text-gray-900 min-h-screen w-full font-sans">
+
+      <Navbar />
+      
       {/* Hero Section */}
       <section className="bg-gradient-to-r from-[#0c0c24] to-[#0a0a1c] text-white py-20 px-6 md:px-20">
         <div className="max-w-6xl mx-auto text-center">
