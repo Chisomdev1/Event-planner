@@ -47,8 +47,6 @@ const LoginPage = () => {
 
           <div className="flex items-center justify-between">
             <label className="flex items-center">
-              <input type="checkbox" className="form-checkbox text-blue-600" />
-              <span className="ml-2 text-sm text-gray-600">Remember me</span>
             </label>
             <a href="#" className="text-sm text-blue-600 hover:underline">
               Forgot password?
@@ -65,7 +63,7 @@ const LoginPage = () => {
 
         <p className="text-center text-sm text-gray-600 mt-6">
           Don’t have an account?{' '}
-          <a href="#" className="text-blue-600 hover:underline">
+          <a href="/register" className="text-blue-600 hover:underline">
             Create one
           </a>
         </p>
