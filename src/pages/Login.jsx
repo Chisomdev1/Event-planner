@@ -1,0 +1,77 @@
+import React from "react";
+import { FcGoogle } from "react-icons/fc";
+import { Wallet } from "lucide-react";
+
+const LoginPage = () => {
+  return (
+    <main className="inter min-h-screen bg-gradient-to-r from-[#0c0c24] to-[#0a0a1c] flex items-center justify-center px-6">
+      <div className="bg-white rounded-2xl shadow-xl w-full max-w-md p-8">
+        <h2 className="text-3xl font-bold text-center text-gray-900 mb-2">Welcome Back</h2>
+        <p className="text-gray-600 text-center mb-6">Sign in to your SuiVent account</p>
+
+        <div className="space-y-4 mb-8">
+          <button className="w-full flex items-center justify-center border border-gray-300 rounded-lg px-4 py-2 text-sm font-medium hover:bg-gray-50">
+            <FcGoogle className="text-xl mr-2" />
+            Continue with Google
+          </button>
+          <button className="w-full flex items-center justify-center border border-blue-600 text-blue-600 rounded-lg px-4 py-2 text-sm font-medium hover:bg-blue-50">
+            <Wallet className="w-5 h-5 mr-2" />
+            Connect to your Sui Wallet
+          </button>
+        </div>
+
+        <form className="space-y-6">
+          <div>
+            <label htmlFor="email" className="block text-sm font-medium text-gray-700">
+              Email address
+            </label>
+            <input
+              type="email"
+              id="email"
+              className="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-lg shadow-sm focus:ring-blue-600 focus:border-blue-600"
+              placeholder="you@example.com"
+            />
+          </div>
+
+          <div>
+            <label htmlFor="password" className="block text-sm font-medium text-gray-700">
+              Password
+            </label>
+            <input
+              type="password"
+              id="password"
+              className="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-lg shadow-sm focus:ring-blue-600 focus:border-blue-600"
+              placeholder="••••••••"
+            />
+          </div>
+
+          <div className="flex items-center justify-between">
+            <label className="flex items-center">
+              <input type="checkbox" className="form-checkbox text-blue-600" />
+              <span className="ml-2 text-sm text-gray-600">Remember me</span>
+            </label>
+            <a href="#" className="text-sm text-blue-600 hover:underline">
+              Forgot password?
+            </a>
+          </div>
+
+          <button
+            type="submit"
+            className="w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 px-4 rounded-lg shadow focus:outline-none focus:ring-2 focus:ring-blue-500"
+          >
+            Sign In
+          </button>
+        </form>
+
+        <p className="text-center text-sm text-gray-600 mt-6">
+          Don’t have an account?{' '}
+          <a href="#" className="text-blue-600 hover:underline">
+            Create one
+          </a>
+        </p>
+      </div>
+    </main>
+  );
+};
+
+export default LoginPage;
