@@ -3,10 +3,9 @@ import { useNavigate } from "react-router-dom";
 import { Button } from "../components/Button";
 import { CalendarDays, MapPin, Users, ClipboardList } from "lucide-react";
 import Navbar from "../components/Navbar";
-
 const Home = () => {
 
-    const navigate = useNavigate();
+  const navigate = useNavigate();
 
   return (
     <main className="bg-white poppins text-gray-900 min-h-screen w-full font-sans">
@@ -15,7 +14,7 @@ const Home = () => {
 
       {/* Hero Section */}
       <section className="bg-gradient-to-r from-[#0c0c24] to-[#0a0a1c] text-white py-20 px-6 md:px-20">
-        <div className="max-w-6xl mx-auto text-center">
+        <div className="max-w-6xl mx-auto">
           <h1 className="text-4xl md:text-6xl font-bold mb-6 leading-tight">
             Plan Seamless Events on Sui
           </h1>
@@ -23,12 +22,18 @@ const Home = () => {
             Professional-grade event management designed for the Sui blockchain ecosystem.
           </p>
           <Button
-      className="bg-blue-600 hover:bg-blue-700 text-white text-lg px-8 py-4 rounded-full"
-      onClick={() => navigate("/login")}
-    >
-      Create an Event
-    </Button>
+            className="bg-blue-600 hover:bg-blue-700 text-white text-lg px-8 py-4 rounded-full"
+            onClick={() => navigate("/login")}
+          >
+            <CalendarDays className="mr-2" />
+            Create an Event
+          </Button>
         </div>
+        {/* <img
+          src={sui}
+          alt="SUI Event"
+          className="rounded-t-full shadow-lg hover:shadow-xl w-[20%] h-[30%] transition duration-300 transform hover:scale-105"
+        /> */}
       </section>
 
       {/* Features Section */}

@@ -1,7 +1,11 @@
 import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
+import { Wallet } from "lucide-react";
 
 const Navbar = () => {
+
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const navigate = useNavigate();
 
   return (
     <nav className="bg-white shadow-md">
@@ -13,7 +17,8 @@ const Navbar = () => {
 
         {/* Mobile View: Connect Wallet and Menu Icon */}
         <div className="flex items-center space-x-2 md:hidden">
-          <button className="px-4 py-2 bg-green-600 text-white rounded-md hover:bg-green-700 transition">
+          <button className="w-full flex items-center justify-center border border-blue-600 text-blue-600 rounded-lg px-2 py-2 text-sm font-medium hover:bg-blue-50">
+            <Wallet className="w-5 h-5 mr-1" />
             Connect Wallet
           </button>
           <button
@@ -62,20 +67,28 @@ const Navbar = () => {
         </ul>
 
         {/* Desktop Action Buttons */}
-        <div className="hidden md:flex items-center space-x-4">
-          <button className="px-4 py-2 text-blue-600 border border-blue-600 rounded-md hover:bg-blue-600 hover:text-white transition">
+        <div className="hidden md:flex items-center space-x-3">
+          <button
+            className="px-4 py-2 text-blue-600 border border-blue-600 rounded-md hover:bg-blue-600 hover:text-white transition"
+            onClick={() => navigate("/login")}
+          >
             Login
           </button>
-          <button className="px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 transition">
+          <button
+            className="px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 transition"
+            onClick={() => navigate("/register")}
+          >
             Sign Up
           </button>
-          <button className="px-4 py-2 bg-green-600 text-white rounded-md hover:bg-green-700 transition">
+          <button className="w-full flex items-center justify-center border border-blue-600 text-blue-600 rounded-lg px-2 py-2 text-sm font-medium hover:bg-blue-50">
+            <Wallet className="w-5 h-5 mr-1" />
             Connect Wallet
           </button>
         </div>
       </div>
 
       {/* Mobile Menu */}
+      
       {isMenuOpen && (
         <div className="md:hidden bg-white shadow-md">
           <ul className="space-y-4 px-4 py-3 text-gray-700 font-medium">
@@ -100,10 +113,16 @@ const Navbar = () => {
               </a>
             </li>
             <div className="flex flex-col space-y-2">
-              <button className="px-4 py-2 text-blue-600 border border-blue-600 rounded-md hover:bg-blue-600 hover:text-white transition">
+              <button
+                className="px-4 py-2 text-blue-600 border border-blue-600 rounded-md hover:bg-blue-600 hover:text-white transition"
+                onClick={() => navigate("/login")}
+              >
                 Login
               </button>
-              <button className="px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 transition">
+              <button
+                className="px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 transition"
+                onClick={() => navigate("/register")}
+              >
                 Sign Up
               </button>
             </div>
