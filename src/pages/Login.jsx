@@ -5,7 +5,7 @@ import { Wallet } from "lucide-react";
 const LoginPage = () => {
   return (
     <main className="inter min-h-screen bg-gradient-to-r from-[#0c0c24] to-[#0a0a1c] flex items-center justify-center px-6">
-      <div className="bg-white rounded-2xl shadow-xl w-full max-w-md p-8">
+      <div className="bg-white rounded-2xl shadow-xl w-full max-w-md py-8 px-4">
         <h2 className="text-3xl font-bold text-center text-gray-900 mb-2">Welcome Back</h2>
         <p className="text-gray-600 text-center mb-6">Sign in to your SuiVent account</p>
 
