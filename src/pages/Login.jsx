@@ -67,6 +67,13 @@ const LoginPage = () => {
             Create one
           </a>
         </p>
+        
+        <p className="text-center text-sm text-gray-600 mt-6">{' '}
+          <a href="/dashboard" className="text-blue-600 hover:underline">
+            Dashboard
+          </a>
+        </p>
+        
       </div>
     </main>
   );
