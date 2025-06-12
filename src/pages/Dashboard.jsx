@@ -27,10 +27,10 @@ const Dashboard = () => {
       {/* Header */}
       <header className="bg-white shadow-md py-4">
         <div className="container mx-auto px-4 flex flex-col md:flex-row justify-between items-center">
-          <h1 className="text-xl md:text-2xl font-bold text-blue-600 mb-4 md:mb-0">SuiVents</h1>
+          <h1 className="text-xl md:text-2xl font-bold text-blue-600 mb-4 md:mb-0"></h1>
           <div className="relative flex items-center space-x-4">
             {/* Create Event Button */}
-            <button className="px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 transition">
+            <button className="text-black">
               Create Event
             </button>
 
