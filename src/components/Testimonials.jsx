@@ -31,6 +31,10 @@ const testimonials = [
 export default function Testimonials() {
   return (
     <section className="py-16 px-6 md:px-20 bg-black">
+
+        <h2 className="text-3xl md:text-4xl font-bold text-center text-white mb-12">    
+            What People Are Saying
+        </h2>
       <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-6">
         {testimonials.map((t) => (
           <div

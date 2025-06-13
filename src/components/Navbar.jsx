@@ -8,7 +8,7 @@ const Navbar = () => {
   const navigate = useNavigate();
 
   return (
-    <nav className="bg-white shadow-md">
+    <nav className="bg-black shadow-md">
       <div className="container mx-auto px-4 py-3 flex items-center justify-between">
         {/* Logo */}
         <div className="text-2xl font-bold text-blue-600">
@@ -43,9 +43,9 @@ const Navbar = () => {
         </div>
 
         {/* Desktop Navigation Links */}
-        <ul className="hidden md:flex space-x-6 text-gray-700 font-medium">
+        <ul className="hidden md:flex space-x-6 text-white font-medium">
           <li>
-            <a href="#home" className="hover:text-blue-600 transition">
+            <a href="#home" className="hover:text-blue-600 transition border-2 border-white px-2 py-1 rounded-[15px] hover:border-blue-600">
               Home
             </a>
           </li>
@@ -67,18 +67,18 @@ const Navbar = () => {
         </ul>
 
         {/* Desktop Action Buttons */}
-        <div className="hidden md:flex items-center space-x-3">
+        <div className="hidden md:flex items-center space-x-4">
           <button
-            className="px-4 py-2 text-blue-600 border border-blue-600 rounded-md hover:bg-blue-600 hover:text-white transition"
+            className="px-3 py-2 text-blue-600 border border-blue-600 rounded-md hover:bg-blue-600 hover:text-white transition"
             onClick={() => navigate("/login")}
           >
             Login
           </button>
           <button
-            className="px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 transition"
+            className="px-3 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 transition"
             onClick={() => navigate("/register")}
           >
-            Sign Up
+            Register
           </button>
           <button className="w-full flex items-center justify-center border border-blue-600 text-blue-600 rounded-lg px-2 py-2 text-sm font-medium hover:bg-blue-50">
             <Wallet className="w-5 h-5 mr-1" />
@@ -90,8 +90,8 @@ const Navbar = () => {
       {/* Mobile Menu */}
       
       {isMenuOpen && (
-        <div className="md:hidden bg-white shadow-md">
-          <ul className="space-y-4 px-4 py-3 text-gray-700 font-medium">
+        <div className="md:hidden bg-black shadow-md">
+          <ul className="space-y-4 px-4 py-3 text-white font-medium">
             <li>
               <a href="#home" className="block hover:text-blue-600 transition">
                 Home
@@ -123,7 +123,7 @@ const Navbar = () => {
                 className="px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 transition"
                 onClick={() => navigate("/register")}
               >
-                Sign Up
+                Register
               </button>
             </div>
           </ul>

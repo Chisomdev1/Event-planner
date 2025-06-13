@@ -43,16 +43,18 @@ const Home = () => {
       <Navbar />
 
       {/* Hero Section */}
-      <section className="bg-gradient-to-r from-[#0c0c24] to-[#0a0a1c] text-white py-20 px-6 md:px-20">
+      <section className="bg-black text-white py-20 px-6 md:px-20">
         <div className="max-w-6xl mx-auto">
-          <h1 className="text-4xl md:text-6xl font-bold mb-6 leading-tight">
+          <h1 className="text-4xl md:text-6xl mb-6 leading-tight">
             Plan Seamless Events on Sui
           </h1>
-          <p className="text-lg md:text-xl text-gray-300 mb-8">
-            Professional-grade event management designed for the Sui blockchain ecosystem.
+          <p className="text-sm md:text-[17px] text-gray-300 mb-8">
+             Professional event management designed for the Sui blockchain ecosystem.
+             Enjoy secure ticketing, real-time engagement, and seamless networking for both organizers and attendees.
+              SuiVents empowers you to create memorable experiences, leverage blockchain transparency, and connect with a global community—all in one platform.
           </p>
           <Button
-            className="bg-blue-600 hover:bg-blue-700 text-white text-lg px-8 py-4 rounded-full"
+            className="bg-blue-600 hover:bg-blue-700 text-white text-lg px-4 py-2 rounded-[20px]"
             onClick={() => navigate("/login")}
           >
             <CalendarDays className="mr-2" />
@@ -67,11 +69,11 @@ const Home = () => {
       </section>
 
       {/* Features Section */}
-      <section className="bg-gray-900 text-white py-16 px-6 md:px-20">
+      <section className="bg-black text-white py-16 px-6 md:px-20">
         <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-12">
-            <h2 className="text-4xl font-bold">WHY BUILD ON SUI EVENTS?</h2>
-            <p className="text-gray-400 mt-4 max-w-xl mx-auto">
+          <div className="text-center mb-12 md:inline-flex justify-between items-center">
+            <h2 className="text-4xl font-bold md:mr-[190px] ">WHY HOST ON SUIVENTS?</h2>
+            <p className="text-gray-400 mt-4 max-w-xl mx-auto md:text-[15px] md:text-left">
               Discover how Sui Event Planner revolutionizes event creation and participation with Web3-native tools, decentralized access, and seamless blockchain integration.
             </p>
           </div>
@@ -94,27 +96,55 @@ const Home = () => {
       </section>
 
       {/* How It Works */}
-      <section className="py-20 px-6 md:px-20 bg-white">
-        <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-3xl md:text-4xl font-bold mb-10">How It Works</h2>
-          <ol className="space-y-8 text-left text-gray-700">
-            <li>
-              <span className="font-semibold text-blue-600">Step 1:</span> Sign in with your Sui wallet, Google or Email.
-            </li>
-            <li>
-              <span className="font-semibold text-blue-600">Step 2:</span> Create and configure your event.
-            </li>
-            <li>
-              <span className="font-semibold text-blue-600">Step 3:</span> Share registration links and manage attendees.
-            </li>
-            <li>
-              <span className="font-semibold text-blue-600">Step 4:</span> Host your event and track engagement live.
-            </li>
-          </ol>
+      <section className="py-20 px-6 md:px-20 bg-black">
+        <div className="max-w-6xl mx-auto text-center">
+          <h2 className="text-3xl md:text-4xl font-bold mb-10 text-white">How It Works</h2>
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8">
+            {/* Step 1 */}
+            <div className="flex flex-col items-center bg-blue-50 rounded-xl shadow hover:shadow-lg transition p-6">
+              <div className="bg-blue-600 text-white rounded-full w-12 h-12 flex items-center justify-center mb-4 text-xl font-bold shadow">
+                1
+              </div>
+              <h3 className="font-semibold text-blue-700 mb-2">Sign In</h3>
+              <p className="text-gray-600 text-sm">
+                Sign in with your Sui wallet, Google, or Email.
+              </p>
+            </div>
+            {/* Step 2 */}
+            <div className="flex flex-col items-center bg-blue-50 rounded-xl shadow hover:shadow-lg transition p-6">
+              <div className="bg-blue-600 text-white rounded-full w-12 h-12 flex items-center justify-center mb-4 text-xl font-bold shadow">
+                2
+              </div>
+              <h3 className="font-semibold text-blue-700 mb-2">Create Event</h3>
+              <p className="text-gray-600 text-sm">
+                Create and configure your event with ease.
+              </p>
+            </div>
+            {/* Step 3 */}
+            <div className="flex flex-col items-center bg-blue-50 rounded-xl shadow hover:shadow-lg transition p-6">
+              <div className="bg-blue-600 text-white rounded-full w-12 h-12 flex items-center justify-center mb-4 text-xl font-bold shadow">
+                3
+              </div>
+              <h3 className="font-semibold text-blue-700 mb-2">Share & Manage</h3>
+              <p className="text-gray-600 text-sm">
+                Share registration links and manage attendees.
+              </p>
+            </div>
+            {/* Step 4 */}
+            <div className="flex flex-col items-center bg-blue-50 rounded-xl shadow hover:shadow-lg transition p-6">
+              <div className="bg-blue-600 text-white rounded-full w-12 h-12 flex items-center justify-center mb-4 text-xl font-bold shadow">
+                4
+              </div>
+              <h3 className="font-semibold text-blue-700 mb-2">Host & Track</h3>
+              <p className="text-gray-600 text-sm">
+                Host your event and track engagement live.
+              </p>
+            </div>
+          </div>
         </div>
       </section>
 
-      <div className="bg-black min-h-screen flex items-center justify-center p-4">
+      <div className="bg-black flex items-center justify-center p-4">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl w-full">
           {/* Speakers */}
           <div className="bg-blue-600 text-white rounded-2xl p-6 flex flex-col justify-between">
@@ -160,7 +190,7 @@ const Home = () => {
 
       {/* Footer */}
       <Footer />
-            
+
     </main>
   )
 }
