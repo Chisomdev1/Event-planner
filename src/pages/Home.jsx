@@ -1,7 +1,6 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
-import { Button } from "../components/Button";
-import { CalendarDays, MapPin, Users, ClipboardList, ArrowRight, MoveUpRight } from "lucide-react";
+import { CalendarDays, ArrowRight, MoveUpRight } from "lucide-react";
 import Navbar from "../components/Navbar";
 import Testimonials from "../components/Testimonials";
 import Footer from "../components/Footer";
@@ -45,21 +44,24 @@ const Home = () => {
       {/* Hero Section */}
       <section className="bg-black text-white py-20 px-6 md:px-20">
         <div className="max-w-6xl mx-auto">
-          <h1 className="text-4xl md:text-6xl mb-6 leading-tight">
+          <h1 className="text-4xl md:text-6xl mb-6 leading-tight inter">
             Plan Seamless Events on Sui
           </h1>
-          <p className="text-sm md:text-[17px] text-gray-300 mb-8">
-             Professional event management designed for the Sui blockchain ecosystem.
-             Enjoy secure ticketing, real-time engagement, and seamless networking for both organizers and attendees.
-              SuiVents empowers you to create memorable experiences, leverage blockchain transparency, and connect with a global community—all in one platform.
+          <p className="text-sm md:text-[17px] text-gray-300 mb-8 inter">
+            Professional event management designed for the Sui blockchain ecosystem,
+            enjoy secure ticketing, real-time engagement, and seamless networking for both organizers and attendees.
+            
+            <span className="hidden md:inline ml-2">
+                 SuiVents empowers you to create memorable experiences, leverage blockchain transparency, and connect with a global community—all in one platform.
+            </span>
           </p>
-          <Button
-            className="bg-blue-600 hover:bg-blue-700 text-white text-lg px-4 py-2 rounded-[20px]"
+          <button
+            className="bg-blue-600 hover:bg-blue-700 inter text-white text-lg px-4 inline-flex items-center py-2 rounded-[20px]"
             onClick={() => navigate("/login")}
           >
             <CalendarDays className="mr-2" />
             Create an Event
-          </Button>
+          </button>
         </div>
         {/* <img
           src={sui}
@@ -96,17 +98,17 @@ const Home = () => {
       </section>
 
       {/* How It Works */}
-      <section className="py-20 px-6 md:px-20 bg-black">
+      <section className="py-20 px-6 md:px-20 bg-black inter">
         <div className="max-w-6xl mx-auto text-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-10 text-white">How It Works</h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8">
             {/* Step 1 */}
-            <div className="flex flex-col items-center bg-blue-50 rounded-xl shadow hover:shadow-lg transition p-6">
-              <div className="bg-blue-600 text-white rounded-full w-12 h-12 flex items-center justify-center mb-4 text-xl font-bold shadow">
+            <div className="flex flex-col items-center bg-blue-500 rounded-xl shadow hover:shadow-lg transition p-6">
+              <div className="bg-white inter text-blue-700  rounded-full w-12 h-12 flex items-center justify-center mb-4 text-xl font-bold shadow">
                 1
               </div>
-              <h3 className="font-semibold text-blue-700 mb-2">Sign In</h3>
-              <p className="text-gray-600 text-sm">
+              <h3 className="font-semibold text-white mb-2">Sign In</h3>
+              <p className="text-white text-sm">
                 Sign in with your Sui wallet, Google, or Email.
               </p>
             </div>
