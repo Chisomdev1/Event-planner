@@ -46,7 +46,7 @@ const ViewEvent = () => {
                 </section>
 
                 {/* Event Details Section */}
-                <section className="mb-10">
+                <section className="mb-10 sm:m-auto">
 
                     <h3 className="text-2xl font-bold mb-4 text-blue-800">INDUSTRY CONNECT</h3>
                     <ul className="space-y-4">

@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import MainNavbar from "../components/MainNavbar";
 import ImageUploader from "../components/ImageUpload";
+import Footer from "../components/Footer";
 
 const CreateEvent = () => {
     const [form, setForm] = useState({
@@ -139,6 +140,9 @@ const CreateEvent = () => {
                     </form>
                 </div>
             </main>
+
+
+            <Footer />
         </div>
     );
 };

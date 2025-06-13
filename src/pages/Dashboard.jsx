@@ -3,6 +3,7 @@ import image from "../assets/images/image1.jpeg";
 import { GoDotFill } from "react-icons/go";
 import MainNavbar from "../components/MainNavbar";
 import { useNavigate } from "react-router-dom"; // <-- Add this import
+import Footer from "../components/Footer";
 
 const Dashboard = () => {
   const navigate = useNavigate(); // <-- Add this
@@ -82,6 +83,8 @@ const Dashboard = () => {
           </div>
         </div>
       </main>
+
+      <Footer />
     </div>
   );
 };
