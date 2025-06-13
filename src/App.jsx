@@ -5,6 +5,7 @@ import Register from "./pages/Register";
 import Login from "./pages/Login";
 import Dashboard from "./pages/Dashboard";
 import Create from "./pages/CreateEvent";
+import ViewEvent from "./pages/ViewEvent";
 
 
 function App() {
@@ -17,7 +18,7 @@ function App() {
         <Route path="/login" element={<Login />} />
         <Route path="/dashboard" element={<Dashboard />} />
         <Route path="/create" element={<Create />} />
-
+        <Route path="/viewevent" element={<ViewEvent />} />
     </Routes>
   )
 }

@@ -35,8 +35,8 @@ const CreateEvent = () => {
             <main className="md:flex justify-center px-4 py-10 inter">
                 <ImageUploader />
 
-                <div className="w-full max-w-2xl rounded-2xl p-8">
-                    <form className="space-y-6" onSubmit={handleSubmit}>
+                <div className="md:w-full md:max-w-2xl  rounded-2xl md:p-8">
+                    <form className="space-y-6 w-[100%]" onSubmit={handleSubmit}>
                         <div>
                             <input
                                 type="text"
@@ -44,7 +44,7 @@ const CreateEvent = () => {
                                 value={form.title}
                                 onChange={handleChange}
                                 required
-                                className="w-full py-2 border-0 size=40 rounded-lg focus:outline-none"
+                                className="w-full text-lg py-2 border-0 size=40 rounded-lg focus:outline-none"
                                 placeholder="EVENT NAME"
                             />
                         </div>
