@@ -2,7 +2,10 @@ import React from "react";
 import image from "../assets/images/image1.jpeg";
 import { GoDotFill } from "react-icons/go";
 import MainNavbar from "../components/MainNavbar";
+import { useNavigate } from "react-router-dom"; // <-- Add this import
+
 const Dashboard = () => {
+  const navigate = useNavigate(); // <-- Add this
 
   return (
     <div className="bg-gray-100 min-h-screen">
@@ -15,23 +18,22 @@ const Dashboard = () => {
 
         {/* Event Cards */}
         <div className="flex items-center mb-4 space-x-4">
-
           <div className="bg-blue-500 text-white rounded-[15px] px-2 py-1">
             Active
             <span>(27)</span>
           </div>
-
-
           <div className="bg-white text-black rounded-[15px] px-2 py-1">
             Past
             <span>(70)</span>
           </div>
-
         </div>
 
         <div className="grid grid-cols-1 gap-6">
           {/* Example Event Card */}
-          <div className="bg-white shadow-md rounded-lg p-4 flex flex-row justify-between items-center gap-4">
+          <div
+            className="bg-white shadow-md rounded-lg p-4 flex flex-row justify-between items-center gap-4 cursor-pointer hover:shadow-lg transition"
+            onClick={() => navigate("/viewevent")}
+          >
             {/* Event Details */}
             <div className="flex-1 min-w-0">
               <p className="font-bold text-red-500 inline-flex items-center">
@@ -48,7 +50,13 @@ const Dashboard = () => {
                 <span className="ml-2 truncate">By Sui on Campus</span>
               </div>
               <div className="text-gray-600 mt-2 truncate">Google Meet</div>
-              <button className="mt-4 px-4 py-2 w-full bg-gradient-to-r from-blue-600 to-blue-800 text-white text-sm md:text-lg font-medium rounded-lg shadow-md hover:shadow-lg hover:scale-105 transition-transform duration-300 inline-flex items-center justify-center">
+              <button
+                className="mt-4 px-4 py-2 w-full bg-gradient-to-r from-blue-600 to-blue-800 text-white text-sm md:text-lg font-medium rounded-lg shadow-md hover:shadow-lg hover:scale-105 transition-transform duration-300 inline-flex items-center justify-center"
+                onClick={e => {
+                  e.stopPropagation();
+                  navigate("/view-event");
+                }}
+              >
                 <svg
                   className="w-5 h-5 md:w-6 md:h-6 mr-2"
                   xmlns="http://www.w3.org/2000/svg"

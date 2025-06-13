@@ -1,6 +1,7 @@
 import React from 'react';
 import image from "../assets/images/image1.jpeg";
 import MainNavbar from '../components/MainNavbar';
+import Footer from '../components/Footer';
 
 const ViewEvent = () => {
     return (
@@ -8,14 +9,17 @@ const ViewEvent = () => {
 
             <MainNavbar />
 
-            <div className="w-full px-4 md:flex p-6 inter text-gray-800 font-sans bg-whit">
+            <div className="w-full px-4 md:flex p-6 inter space-x-5 justify-center text-gray-800 font-sans bg-whit">
                 {/* Hosted By Section */}
-                <section className="mb-10">
-                    <img
+                <section className="mb-10 mr-0">
+                    <div className=''>
+                        <img
                         src={image}
                         alt="Event"
-                        className="w-74 h-74 md:w-[50%] md:h-[50%] rounded-lg m-0" // <-- add m-0 to remove margin
+                        className="w-74 h-74 md:w-[350px] md:h-[350px] rounded-lg mb-2" // <-- add m-0 to remove margin
                     />
+                    </div>
+                    
                     <h3 className="text-xl font-semibold mb-4 text-blue-700">Hosted By</h3>
                     <ul className="space-y-3">
                         <li className="flex items-center">
@@ -111,6 +115,9 @@ const ViewEvent = () => {
 
                 </section>
             </div>
+
+
+            <Footer />
         </div>
     );
 };
