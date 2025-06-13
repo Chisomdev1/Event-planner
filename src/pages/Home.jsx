@@ -42,12 +42,12 @@ const Home = () => {
       <Navbar />
 
       {/* Hero Section */}
-      <section className="bg-black text-white py-20 px-6 md:px-20">
+      <section className="bg-black text-white py-20 sm:font-bold px-6 md:px-20">
         <div className="max-w-6xl mx-auto">
           <h1 className="text-4xl md:text-6xl mb-6 leading-tight inter">
             Plan Seamless Events on Sui
           </h1>
-          <p className="text-sm md:text-[17px] text-gray-300 mb-8 inter">
+          <p className="text-md md:text-[17px] text-gray-300 mb-8 inter">
             Professional event management designed for the Sui blockchain ecosystem,
             enjoy secure ticketing, real-time engagement, and seamless networking for both organizers and attendees.
             
