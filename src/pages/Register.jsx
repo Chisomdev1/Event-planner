@@ -105,7 +105,7 @@ const RegisterPage = () => {
 
                     <div>
                         <label htmlFor="email" className="block text-sm font-medium text-gray-700">
-                            Email address
+                            Email addres
                         </label>
                         <input
                             type="email"
